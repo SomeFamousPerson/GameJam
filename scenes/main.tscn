@@ -1,7 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://pf4pcncepgod"]
+[gd_scene load_steps=6 format=3 uid="uid://d2yyou7ras0kn"]
 
 [ext_resource type="PackedScene" uid="uid://enkqqfevto1d" path="res://scenes/player.tscn" id="1_5081d"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_h0ynw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vs32f"]
+size = Vector2(1213.5, 157)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dsknd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7anrr"]
+size = Vector2(150.5, 157)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_h0ynw")
 
-[node name="Node2D" parent="." instance=ExtResource("1_5081d")]
+[node name="player" parent="." instance=ExtResource("1_5081d")]
+position = Vector2(459, 383)
+
+[node name="world" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="world"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/StaticBody2D"]
+position = Vector2(613.25, 590.5)
+shape = SubResource("RectangleShape2D_vs32f")
+
+[node name="Sprite2D" type="Sprite2D" parent="world/StaticBody2D"]
+position = Vector2(612.565, 590.443)
+scale = Vector2(-1207.7, 153.428)
+texture = SubResource("PlaceholderTexture2D_dsknd")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1071, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-110, 99)
+shape = SubResource("RectangleShape2D_7anrr")
+debug_color = Color(0.270588, 0.603922, 0.521569, 0.419608)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
