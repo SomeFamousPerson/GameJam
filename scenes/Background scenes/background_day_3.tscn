@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://begob8yhiqvp1"]
+
+[ext_resource type="Texture2D" uid="uid://dl5a6m82180vd" path="res://free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/3/Day/1.png" id="1_sh5rv"]
+[ext_resource type="Texture2D" uid="uid://daahrtd4k8umd" path="res://free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/3/Day/2.png" id="2_1blu1"]
+[ext_resource type="Texture2D" uid="uid://bn2tcirhu28n2" path="res://free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/3/Day/3.png" id="3_32jxo"]
+[ext_resource type="Texture2D" uid="uid://dnufaujitstbh" path="res://free-scrolling-city-backgrounds-pixel-art/1 Backgrounds/3/Day/5.png" id="4_e8ecp"]
+
+[node name="background_day_3" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-35, -241)
+motion_mirroring = Vector2(1728, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_sh5rv")
+region_enabled = true
+region_rect = Rect2(0, 0.915, 576, 324)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-35, -241)
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(1728, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_1blu1")
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 324)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-35, -241)
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1728, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+scale = Vector2(3, 3)
+texture = ExtResource("3_32jxo")
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 324)
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-35, -241)
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1728, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(-3, 6)
+scale = Vector2(3, 3)
+texture = ExtResource("4_e8ecp")
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 324)
