@@ -19,6 +19,10 @@ config/icon="res://assets/icon.svg"
 
 Global="*res://global.gd"
 
+[display]
+
+mouse_cursor/custom_image="res://assets/ui assets/Pointers/01.png"
+
 [input]
 
 "spawn card"={
