@@ -1,10 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://enkqqfevto1d"]
+[gd_scene load_steps=4 format=3 uid="uid://enkqqfevto1d"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h4kte"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_4brbj"]
 
-[node name="Node2D" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbmpp"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2vo3m"]
+
+[node name="player" type="CharacterBody2D"]
+scale = Vector2(3.24, 3.24)
+script = ExtResource("1_4brbj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_h4kte")
+shape = SubResource("RectangleShape2D_fbmpp")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-3.57628e-07, 0.0190215)
+scale = Vector2(20, 19.962)
+texture = SubResource("PlaceholderTexture2D_2vo3m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
