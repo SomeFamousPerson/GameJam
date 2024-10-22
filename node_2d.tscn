@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvokoux2jvix5"]
+
+[ext_resource type="Texture2D" uid="uid://dxvgpuwi2t6kw" path="res://assets/UI assets pack 2/Background.png" id="1_uf22b"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(372, 188)
+scale = Vector2(16.1304, 4.58065)
+texture = ExtResource("1_uf22b")
+
+[node name="Deck of cards" type="Sprite2D" parent="."]
+position = Vector2(372, 188)
+scale = Vector2(16.1304, 4.58065)
