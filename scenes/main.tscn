@@ -15,11 +15,12 @@ size = Vector2(150.5, 157)
 script = ExtResource("1_h0ynw")
 
 [node name="player" parent="." instance=ExtResource("1_5081d")]
-position = Vector2(459, 383)
+position = Vector2(210, 283)
 
 [node name="world" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="world"]
+scale = Vector2(4.64, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="world/StaticBody2D"]
 position = Vector2(613.25, 590.5)
@@ -30,12 +31,58 @@ position = Vector2(612.565, 590.443)
 scale = Vector2(-1207.7, 153.428)
 texture = SubResource("PlaceholderTexture2D_dsknd")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="StaticBody2D2" type="StaticBody2D" parent="world"]
+position = Vector2(499, -126)
+scale = Vector2(0.0489395, 1.11182)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/StaticBody2D2"]
+position = Vector2(613.25, 590.5)
+shape = SubResource("RectangleShape2D_vs32f")
+
+[node name="Sprite2D" type="Sprite2D" parent="world/StaticBody2D2"]
+position = Vector2(612.565, 590.443)
+scale = Vector2(-1207.7, 153.428)
+texture = SubResource("PlaceholderTexture2D_dsknd")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="world"]
+position = Vector2(51, -1607)
+scale = Vector2(0.0242561, 3.22811)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/StaticBody2D3"]
+position = Vector2(613.25, 590.5)
+shape = SubResource("RectangleShape2D_vs32f")
+
+[node name="Sprite2D" type="Sprite2D" parent="world/StaticBody2D3"]
+position = Vector2(612.565, 590.443)
+scale = Vector2(-1207.7, 153.428)
+texture = SubResource("PlaceholderTexture2D_dsknd")
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="Enemy 1" type="Area2D" parent="enemies"]
 position = Vector2(1071, 329)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-110, 99)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy 1"]
+position = Vector2(-115, 97)
 shape = SubResource("RectangleShape2D_7anrr")
 debug_color = Color(0.270588, 0.603922, 0.521569, 0.419608)
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="Enemy 2" type="Area2D" parent="enemies"]
+position = Vector2(2917, 315)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy 2"]
+position = Vector2(-115, 97)
+shape = SubResource("RectangleShape2D_7anrr")
+debug_color = Color(0.270588, 0.603922, 0.521569, 0.419608)
+
+[node name="Enemy 3" type="Area2D" parent="enemies"]
+position = Vector2(4929, 320)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/Enemy 3"]
+position = Vector2(-115, 97)
+shape = SubResource("RectangleShape2D_7anrr")
+debug_color = Color(0.270588, 0.603922, 0.521569, 0.419608)
+
+[connection signal="body_entered" from="enemies/Enemy 1" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="enemies/Enemy 2" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="enemies/Enemy 3" to="." method="_on_area_2d_body_entered"]
