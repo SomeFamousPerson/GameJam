@@ -1,11 +1,39 @@
-[gd_scene format=3 uid="uid://dgs1jcpm6xch2"]
+[gd_scene load_steps=4 format=3 uid="uid://c148f5obgeeyc"]
+
+[ext_resource type="Script" path="res://scenes/combat.gd" id="1_h4jdr"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_eycyd"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_t38av"]
 
 [node name="combat" type="Node2D"]
+script = ExtResource("1_h4jdr")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 398.0
-offset_top = 239.0
-offset_right = 676.0
-offset_bottom = 294.0
-theme_override_font_sizes/font_size = 40
-text = "combat time :)"
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 324)
+
+[node name="Table" type="Sprite2D" parent="."]
+modulate = Color(0.709804, 0.513726, 0.282353, 1)
+position = Vector2(577.125, 519.625)
+scale = Vector2(1131.75, 246.75)
+texture = SubResource("CanvasTexture_eycyd")
+
+[node name="Deck of cards" type="Sprite2D" parent="."]
+position = Vector2(1037.5, 521.125)
+scale = Vector2(141, 202.25)
+texture = SubResource("CanvasTexture_t38av")
+
+[node name="slot1" type="Marker2D" parent="."]
+position = Vector2(100, 520)
+
+[node name="slot2" type="Marker2D" parent="."]
+position = Vector2(264, 520)
+
+[node name="slot3" type="Marker2D" parent="."]
+position = Vector2(430, 520)
+
+[node name="slot4" type="Marker2D" parent="."]
+position = Vector2(603, 520)
+
+[node name="slot5" type="Marker2D" parent="."]
+position = Vector2(775, 520)
