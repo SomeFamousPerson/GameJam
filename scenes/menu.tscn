@@ -59,9 +59,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -118.0
-offset_top = 35.0
+offset_top = 119.0
 offset_right = -16.0
-offset_bottom = 98.0
+offset_bottom = 182.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.69339, 0.785276)
@@ -69,15 +69,15 @@ theme_override_font_sizes/font_size = 40
 text = "Start"
 
 [node name="start button" type="Sprite2D" parent="."]
-position = Vector2(-31, 62)
+position = Vector2(-31, 146)
 texture = ExtResource("3_8n841")
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
 offset_left = -71.0
-offset_top = 36.0
+offset_top = 120.0
 offset_right = 10.0
-offset_bottom = 78.0
+offset_bottom = 162.0
 scale = Vector2(0.873865, 0.873865)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
