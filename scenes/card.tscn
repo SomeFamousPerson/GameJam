@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsviqlmltmj2"]
+[gd_scene load_steps=4 format=3 uid="uid://bsviqlmltmj2"]
 
 [ext_resource type="Script" path="res://scenes/card.gd" id="1_0vnqb"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_y0ety"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7j2b2"]
+size = Vector2(141, 202)
 
 [node name="Card" type="CharacterBody2D"]
 script = ExtResource("1_0vnqb")
@@ -39,3 +42,16 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 15
 text = "Mumbojumbo"
 autowrap_mode = 3
+
+[node name="Mouse detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse detection"]
+position = Vector2(1.5, -2)
+shape = SubResource("RectangleShape2D_7j2b2")
+
+[node name="play timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="mouse_entered" from="Mouse detection" to="." method="_on_mouse_detection_mouse_entered"]
+[connection signal="mouse_exited" from="Mouse detection" to="." method="_on_mouse_detection_mouse_exited"]
+[connection signal="timeout" from="play timer" to="." method="_on_play_timer_timeout"]

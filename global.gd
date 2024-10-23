@@ -18,3 +18,5 @@ var cards = {
 var deck_order = [""]
 var cards_drawn = 0
 var mana = 3
+
+var empty_space = 0

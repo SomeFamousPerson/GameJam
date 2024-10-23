@@ -43,3 +43,9 @@ func _ready():
 func _process(delta):
 	pass
 	
+
+
+func _on_button_pressed():
+	Global.cards_drawn += 1
+	Global.hand += 1
+	draw()
