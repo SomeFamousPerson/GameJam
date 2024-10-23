@@ -1,49 +1,44 @@
 extends Node2D
 
-@onready var card = $card
-
-var cards = {
-"HealthPotion":[2,2],   #Increases player health +5
-"AsetialRecall":[2,1], #Draw 3 cards
-"Slash":[1,3],          #Attack for 3 damage
-"SwordStance":[2,2],   #Double damage for 3 attacks
-"Fireball":[5,2],       #Deals 4 damage to all enemies
-"ManaPotion":[0,2],    #Permanent mana increase +1
-"HammerSmash":[3,1],   #Attack for 6 damage
-"Evasion":[1,2],        #Dodges the next 2 attacks
-"Sheild":[2,2],         #Permanently negates all damage by 1
-"BlackLotus":[0,1],    #Give 3 mana
-"PoisonAttack":[2,2]}  #Deal 2 damage, +1 each turn
-
-var deck_order = []
+var card = preload("res://scenes/card.tscn")
 
 
+
+
+
+func draw():
+	var card_insta = card.instantiate()
+	add_child(card_insta)
+	
 func _ready():
-	for i in cards["HealthPotion"][1]:
-		deck_order.append("HealthPotion")
-	for i in cards["AsetialRecall"][1]:
-		deck_order.append("AsetialRecall")
-	for i in cards["Slash"][1]:
-		deck_order.append("Slash")
-	for i in cards["SwordStance"][1]:
-		deck_order.append("SwordStance")
-	for i in cards["Fireball"][1]:
-		deck_order.append("Fireball")
-	for i in cards["ManaPotion"][1]:
-		deck_order.append("ManaPotion")
-	for i in cards["HammerSmash"][1]:
-		deck_order.append("HammerSmash")
-	for i in cards["Evasion"][1]:
-		deck_order.append("Evasion")
-	for i in cards["BlackLotus"][1]:
-		deck_order.append("BlackLotus")
-	for i in cards["PoisonAttack"][1]:
-		deck_order.append("PoisonAttack")
+	for i in Global.cards["HealthPotion"][1]:
+		Global.deck_order.append("HealthPotion")
+	for i in Global.cards["AsetialRecall"][1]:
+		Global.deck_order.append("AsetialRecall")
+	for i in Global.cards["Slash"][1]:
+		Global.deck_order.append("Slash")
+	for i in Global.cards["SwordStance"][1]:
+		Global.deck_order.append("SwordStance")
+	for i in Global.cards["Fireball"][1]:
+		Global.deck_order.append("Fireball")
+	for i in Global.cards["ManaPotion"][1]:
+		Global.deck_order.append("ManaPotion")
+	for i in Global.cards["HammerSmash"][1]:
+		Global.deck_order.append("HammerSmash")
+	for i in Global.cards["Evasion"][1]:
+		Global.deck_order.append("Evasion")
+	for i in Global.cards["BlackLotus"][1]:
+		Global.deck_order.append("BlackLotus")
+	for i in Global.cards["PoisonAttack"][1]:
+		Global.deck_order.append("PoisonAttack")
 		
-	deck_order.shuffle()
-	print(deck_order)
-
-
+	Global.deck_order.shuffle()
+	print(Global.deck_order)
+	for i in 3:
+		Global.cards_drawn += 1
+		Global.hand += 1
+		draw()
+		
 func _process(delta):
 	pass
 	

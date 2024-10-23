@@ -22,18 +22,3 @@ texture = SubResource("CanvasTexture_eycyd")
 position = Vector2(1037.5, 521.125)
 scale = Vector2(141, 202.25)
 texture = SubResource("CanvasTexture_t38av")
-
-[node name="slot1" type="Marker2D" parent="."]
-position = Vector2(100, 520)
-
-[node name="slot2" type="Marker2D" parent="."]
-position = Vector2(264, 520)
-
-[node name="slot3" type="Marker2D" parent="."]
-position = Vector2(430, 520)
-
-[node name="slot4" type="Marker2D" parent="."]
-position = Vector2(603, 520)
-
-[node name="slot5" type="Marker2D" parent="."]
-position = Vector2(775, 520)
