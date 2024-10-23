@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7fsla42ah18s"
-path="res://.godot/imported/_Jump.png-00e986d4e37be0b64ac0370173485296.ctex"
+uid="uid://hl4d2o6wkxhn"
+path="res://.godot/imported/_WallClimbNoMovement.png-7874c54cfb071f0380496313ba3603af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FreeKnight_v1/Colour1/Outline/120x80_PNGSheets/_Jump.png"
-dest_files=["res://.godot/imported/_Jump.png-00e986d4e37be0b64ac0370173485296.ctex"]
+source_file="res://assets/FreeKnight_v1/Colour1/Outline/120x80_PNGSheets/_WallClimbNoMovement.png"
+dest_files=["res://.godot/imported/_WallClimbNoMovement.png-7874c54cfb071f0380496313ba3603af.ctex"]
 
 [params]
 
