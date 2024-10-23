@@ -34,6 +34,7 @@ func _ready():
 		
 	Global.deck_order.shuffle()
 	print(Global.deck_order)
+	$Mana.value = Global.mana
 	for i in 3:
 		Global.cards_drawn += 1
 		Global.hand += 1

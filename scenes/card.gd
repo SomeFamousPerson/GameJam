@@ -17,9 +17,12 @@ func _ready():
 	if Global.hand == 5:
 		self.global_position = Vector2(740,520)
 
-	$Name.text = Global.deck_order[Global.cards_drawn]
+	$Name.text = Global.deck_order[(Global.cards_drawn) - 1]
 	
-	$Mana.text = Global.cards[str(Global.deck_order[(Global.cards_drawn) + 1])][0]
+	$Mana.text = str(Global.cards[str(Global.deck_order[(Global.cards_drawn) - 1])][0])
+	print(Global.cards[str(Global.deck_order[(Global.cards_drawn) - 1])][0])
+	
+	$Info.text = Global.cards[Global.deck_order[(Global.cards_drawn)-1]][2]
 
 func _physics_process(delta):
 	pass

@@ -22,3 +22,17 @@ texture = SubResource("CanvasTexture_eycyd")
 position = Vector2(1037.5, 521.125)
 scale = Vector2(141, 202.25)
 texture = SubResource("CanvasTexture_t38av")
+
+[node name="Mana" type="ProgressBar" parent="."]
+offset_left = 840.0
+offset_top = 360.0
+offset_right = 1136.0
+offset_bottom = 387.0
+max_value = 10.0
+
+[node name="End turn" type="Button" parent="."]
+offset_left = 13.0
+offset_top = 345.0
+offset_right = 120.0
+offset_bottom = 391.0
+text = "End Turn"

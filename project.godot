@@ -14,10 +14,15 @@ config/name="Game Jam"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://assets/icon.svg"
+"<<<<<<<Updatedupstream[autoload]Global"="*res://global.gd"
 
 [autoload]
 
 Global="*res://global.gd"
+
+[display]
+
+mouse_cursor/custom_image="res://assets/ui assets/Pointers/01.png"
 
 [input]
 
