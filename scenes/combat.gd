@@ -41,7 +41,8 @@ func _ready():
 		draw()
 		
 func _process(delta):
-	pass
+	$Label.text = str(Global.hand)
+	$Label2.text = str(Global.cards_drawn)
 	
 
 

@@ -35,18 +35,47 @@ func _physics_process(delta):
 		self.global_position= Vector2(580,360)
 		$"Mouse detection".visible = false
 		$"play timer".start()
+		Global.hand -= 1
 		Global.empty_space = current_card_position
 		
 	if Global.empty_space == 1:
 		if current_card_position == 2:
+			current_card_position = 1
 			self.global_position = Vector2(100,520)
 		if current_card_position == 3:
+			current_card_position = 2
 			self.global_position = Vector2(260,520)
 		if current_card_position == 4:
+			current_card_position = 3
 			self.global_position = Vector2(420,520)
 		if current_card_position == 5:
+			current_card_position = 4
 			self.global_position = Vector2(580,520)
-	
+		
+	if Global.empty_space == 2:
+		if current_card_position == 3:
+			current_card_position = 2
+			self.global_position = Vector2(260,520)
+		if current_card_position == 4:
+			current_card_position = 3
+			self.global_position = Vector2(420,520)
+		if current_card_position == 5:
+			current_card_position = 4
+			self.global_position = Vector2(580,520)
+		
+	if Global.empty_space == 3:
+		if current_card_position == 4:
+			current_card_position = 3
+			self.global_position = Vector2(420,520)
+		if current_card_position == 5:
+			current_card_position = 4
+			self.global_position = Vector2(580,520)
+			
+	if Global.empty_space == 4:
+		if current_card_position == 5:
+			current_card_position = 4
+			self.global_position = Vector2(580,520)
+
 func _on_mouse_detection_mouse_entered():
 	$"Deck of cards".scale += Vector2(5,5)
 	mouse_inside = true
@@ -58,5 +87,4 @@ func _on_mouse_detection_mouse_exited():
 
 
 func _on_play_timer_timeout():
-	Global.hand -= 1
 	queue_free()

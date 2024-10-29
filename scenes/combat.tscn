@@ -50,4 +50,16 @@ offset_right = 384.0
 offset_bottom = 166.0
 text = "draw"
 
+[node name="Label" type="Label" parent="."]
+offset_left = 808.0
+offset_top = 108.0
+offset_right = 921.0
+offset_bottom = 166.0
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 878.0
+offset_top = 202.0
+offset_right = 991.0
+offset_bottom = 260.0
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -15,7 +15,7 @@ var cards = {
 "BlackLotus":[0,1, "+3 Mana"],    #Give 3 mana
 "PoisonAttack":[2,2, "2 Damage, posion effect applyed"]}  #Deal 2 damage, +1 each turn
 
-var deck_order = [""]
+var deck_order = []
 var cards_drawn = 0
 var mana = 3
 
